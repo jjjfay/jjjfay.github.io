@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ME 507 Term Project: controller_t Struct Reference</title>
+<title>ME 507 Term Project: Myoelectric Hand Control System: controller_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="project_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ME 507 Term Project<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">ME 507 Term Project: Myoelectric Hand Control System
    </div>
-   <div id="projectbrief">A prosthetic hand that can open, close, and spin on one axis controlled by myoelectric and pressure sensors.</div>
+   <div id="projectbrief">A prosthetic hand that can open, close, and spin on one axis controlled by myoelectric sensors and a motor encoder.</div>
   </td>
  </tr>
  </tbody>
@@ -86,10 +87,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a71e1fdca91f8bb344d4542ca1829d51b" id="r_a71e1fdca91f8bb344d4542ca1829d51b"><td class="memItemLeft" align="right" valign="top">motor_driver&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71e1fdca91f8bb344d4542ca1829d51b">p_mot</a></td></tr>
-<tr class="separator:a71e1fdca91f8bb344d4542ca1829d51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41e5b595cddc5d4a76aed105d0ee1fa4" id="r_a41e5b595cddc5d4a76aed105d0ee1fa4"><td class="memItemLeft" align="right" valign="top">encoder_reader&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41e5b595cddc5d4a76aed105d0ee1fa4">p_enc</a></td></tr>
-<tr class="separator:a41e5b595cddc5d4a76aed105d0ee1fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41eeb59b62f224a5b1f687a65897e0c3" id="r_a41eeb59b62f224a5b1f687a65897e0c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmotor__t.html">motor_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41eeb59b62f224a5b1f687a65897e0c3">p_mot</a></td></tr>
+<tr class="separator:a41eeb59b62f224a5b1f687a65897e0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2108f385ba7b132cd09e79d74df77a66" id="r_a2108f385ba7b132cd09e79d74df77a66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structencoder__t.html">encoder_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2108f385ba7b132cd09e79d74df77a66">p_enc</a></td></tr>
+<tr class="separator:a2108f385ba7b132cd09e79d74df77a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fcc2da40851e85080d0048ab51f1e88" id="r_a5fcc2da40851e85080d0048ab51f1e88"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fcc2da40851e85080d0048ab51f1e88">gain</a></td></tr>
 <tr class="separator:a5fcc2da40851e85080d0048ab51f1e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afad9b2a7de51d07966f868d056ea2fab" id="r_afad9b2a7de51d07966f868d056ea2fab"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afad9b2a7de51d07966f868d056ea2fab">setpoint</a></td></tr>
@@ -113,14 +114,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a41e5b595cddc5d4a76aed105d0ee1fa4" name="a41e5b595cddc5d4a76aed105d0ee1fa4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41e5b595cddc5d4a76aed105d0ee1fa4">&#9670;&#160;</a></span>p_enc</h2>
+<a id="a2108f385ba7b132cd09e79d74df77a66" name="a2108f385ba7b132cd09e79d74df77a66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2108f385ba7b132cd09e79d74df77a66">&#9670;&#160;</a></span>p_enc</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">encoder_reader controller_t::p_enc</td>
+          <td class="memname"><a class="el" href="structencoder__t.html">encoder_t</a>* controller_t::p_enc</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -128,14 +129,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a71e1fdca91f8bb344d4542ca1829d51b" name="a71e1fdca91f8bb344d4542ca1829d51b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71e1fdca91f8bb344d4542ca1829d51b">&#9670;&#160;</a></span>p_mot</h2>
+<a id="a41eeb59b62f224a5b1f687a65897e0c3" name="a41eeb59b62f224a5b1f687a65897e0c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41eeb59b62f224a5b1f687a65897e0c3">&#9670;&#160;</a></span>p_mot</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">motor_driver controller_t::p_mot</td>
+          <td class="memname"><a class="el" href="structmotor__t.html">motor_t</a>* controller_t::p_mot</td>
         </tr>
       </table>
 </div><div class="memdoc">

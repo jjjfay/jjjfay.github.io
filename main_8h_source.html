@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ME 507 Term Project: Core/Inc/main.h Source File</title>
+<title>ME 507 Term Project: Myoelectric Hand Control System: Core/Inc/main.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="project_logo.png"/></td>
   <td id="projectalign">
-   <div id="projectname">ME 507 Term Project<span id="projectnumber">&#160;1.0</span>
+   <div id="projectname">ME 507 Term Project: Myoelectric Hand Control System
    </div>
-   <div id="projectbrief">A prosthetic hand that can open, close, and spin on one axis controlled by myoelectric and pressure sensors.</div>
+   <div id="projectbrief">A prosthetic hand that can open, close, and spin on one axis controlled by myoelectric sensors and a motor encoder.</div>
   </td>
  </tr>
  </tbody>
@@ -121,56 +122,47 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8h.html#ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</a>(TIM_HandleTypeDef *htim);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">/* Exported functions prototypes ---------------------------------------------*/</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> Error_Handler(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="main_8h.html#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">/* USER CODE BEGIN EFP */</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">/* USER CODE END EFP */</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">/* Private defines -----------------------------------------------------------*/</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#define MYO1_Pin GPIO_PIN_0</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#define MYO1_GPIO_Port GPIOC</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#define MYO2_Pin GPIO_PIN_1</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#define MYO2_GPIO_Port GPIOC</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#define PRS_Pin GPIO_PIN_2</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#define PRS_GPIO_Port GPIOC</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#define V_BAT_Pin GPIO_PIN_3</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#define V_BAT_GPIO_Port GPIOC</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#define PWMB_Pin GPIO_PIN_2</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#define PWMB_GPIO_Port GPIOA</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#define PWMA_Pin GPIO_PIN_5</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#define PWMA_GPIO_Port GPIOA</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#define STBY_Pin GPIO_PIN_6</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#define STBY_GPIO_Port GPIOA</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#define AIN1_Pin GPIO_PIN_7</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#define AIN1_GPIO_Port GPIOA</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#define AIN2_Pin GPIO_PIN_4</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#define AIN2_GPIO_Port GPIOC</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#define BIN1_Pin GPIO_PIN_5</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#define BIN1_GPIO_Port GPIOC</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#define BIN2_Pin GPIO_PIN_0</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#define BIN2_GPIO_Port GPIOB</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#define MOTOR_ENC_Pin GPIO_PIN_6</span></div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#define MOTOR_ENC_GPIO_Port GPIOC</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#define RADIO_Pin GPIO_PIN_8</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#define RADIO_GPIO_Port GPIOA</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#define HAND_ENC_Pin GPIO_PIN_10</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#define HAND_ENC_GPIO_Port GPIOA</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#define GPIO_1_Pin GPIO_PIN_15</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#define GPIO_1_GPIO_Port GPIOA</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#define GPIO_2_Pin GPIO_PIN_11</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#define GPIO_2_GPIO_Port GPIOC</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">/* USER CODE BEGIN Private defines */</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">/* USER CODE END Private defines */</span></div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#endif </span><span class="comment">/* __MAIN_H */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="amain_8h_html_ae70bce6c39d0b570a7523b86738cec4b"><div class="ttname"><a href="main_8h.html#ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</a></div><div class="ttdeci">void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim)</div><div class="ttdef"><b>Definition</b> stm32l4xx_hal_msp.c:345</div></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="main_8h.html#a5ec43c54e87756589a57129265eacfcf">   62</a></span><span class="preprocessor">#define SMYO_Pin GPIO_PIN_0</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="main_8h.html#a4a1043799c452d605d6c55fd87576011">   63</a></span><span class="preprocessor">#define SMYO_GPIO_Port GPIOC</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="main_8h.html#acbc6f6a9e5bbf43f77253016cd6a5bdb">   64</a></span><span class="preprocessor">#define HMYO_Pin GPIO_PIN_1</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="main_8h.html#a74c5c3ef81acf1a9be162c60249e9507">   65</a></span><span class="preprocessor">#define HMYO_GPIO_Port GPIOC</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="main_8h.html#acf671a6d2fce947a588daa291475c50b">   66</a></span><span class="preprocessor">#define SPIN_PWMA_Pin GPIO_PIN_0</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="main_8h.html#a5770985770da2bad42a782a3319e5e7e">   67</a></span><span class="preprocessor">#define SPIN_PWMA_GPIO_Port GPIOA</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="main_8h.html#a9b79e32f51a45b790a0b71849a4bbcc1">   68</a></span><span class="preprocessor">#define SPIN_PWMB_Pin GPIO_PIN_1</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="main_8h.html#a8f8e99b6f68fa73f78f912135f08eb73">   69</a></span><span class="preprocessor">#define SPIN_PWMB_GPIO_Port GPIOA</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="main_8h.html#a67f5b74b0c9b16269dcd2a6429020ee6">   70</a></span><span class="preprocessor">#define SPIN_ENCA_Pin GPIO_PIN_6</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="main_8h.html#a1ce5452594eeecbcab124c4cc1802fe0">   71</a></span><span class="preprocessor">#define SPIN_ENCA_GPIO_Port GPIOA</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="main_8h.html#a01169a074dd30e0ac99c8379384d070b">   72</a></span><span class="preprocessor">#define SPIN_ENCB_Pin GPIO_PIN_7</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="main_8h.html#adcb2fc020e8188394cfeefabf2425e54">   73</a></span><span class="preprocessor">#define SPIN_ENCB_GPIO_Port GPIOA</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="main_8h.html#ad84309e34315208a54c4e6abd6262ea1">   74</a></span><span class="preprocessor">#define HAND_PWMA_Pin GPIO_PIN_10</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="main_8h.html#a045db929bb2200af910349f7405230cb">   75</a></span><span class="preprocessor">#define HAND_PWMA_GPIO_Port GPIOB</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="main_8h.html#ac4f55e1cf87dcb9a6d7ffcdd301f943f">   76</a></span><span class="preprocessor">#define HAND_PWMB_Pin GPIO_PIN_11</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="main_8h.html#a750579be90e086200a2f7d8c7e14beb0">   77</a></span><span class="preprocessor">#define HAND_PWMB_GPIO_Port GPIOB</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="main_8h.html#a6d29613be5df1c7a9f905e205927bd94">   78</a></span><span class="preprocessor">#define RADIO_Pin GPIO_PIN_8</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="main_8h.html#afcfe8a5e5d91bd57d73e2fdf9d034959">   79</a></span><span class="preprocessor">#define RADIO_GPIO_Port GPIOA</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="main_8h.html#a26677a1c7c7d8f21132be72f6580858b">   80</a></span><span class="preprocessor">#define HAND_ENCA_Pin GPIO_PIN_6</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="main_8h.html#aba369fa52c777377add68f741f87343d">   81</a></span><span class="preprocessor">#define HAND_ENCA_GPIO_Port GPIOB</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="main_8h.html#a0ab2ef0cc8ec3159293e394c1c777291">   82</a></span><span class="preprocessor">#define HAND_ENCB_Pin GPIO_PIN_7</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="main_8h.html#a0d5720ce72eac4fe84061bca3d5ed42a">   83</a></span><span class="preprocessor">#define HAND_ENCB_GPIO_Port GPIOB</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">/* USER CODE BEGIN Private defines */</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">/* USER CODE END Private defines */</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif </span><span class="comment">/* __MAIN_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="amain_8h_html_a1730ffe1e560465665eb47d9264826f9"><div class="ttname"><a href="main_8h.html#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a></div><div class="ttdeci">void Error_Handler(void)</div><div class="ttdoc">This function is executed in case of error occurrence.</div><div class="ttdef"><b>Definition</b> main.c:1087</div></div>
+<div class="ttc" id="amain_8h_html_ae70bce6c39d0b570a7523b86738cec4b"><div class="ttname"><a href="main_8h.html#ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</a></div><div class="ttdeci">void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim)</div><div class="ttdef"><b>Definition</b> stm32l4xx_hal_msp.c:315</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

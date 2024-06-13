@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usagefault_5fhandler_0',['UsageFault_Handler',['../stm32l4xx__it_8c.html#a1d98923de2ed6b7309b66f9ba2971647',1,'UsageFault_Handler(void):&#160;stm32l4xx_it.c'],['../stm32l4xx__it_8h.html#a1d98923de2ed6b7309b66f9ba2971647',1,'UsageFault_Handler(void):&#160;stm32l4xx_it.c']]]
+  ['read_5fcurrent_0',['read_current',['../myo_8h.html#a615011b0f321a62ffb65d36ef6d015a8',1,'read_current(myo_t *p_myo):&#160;myo.c'],['../myo_8c.html#a615011b0f321a62ffb65d36ef6d015a8',1,'read_current(myo_t *p_myo):&#160;myo.c']]]
 ];
